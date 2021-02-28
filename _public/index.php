@@ -22,6 +22,30 @@ $APPLICATION->SetPageProperty("keywords", "сайт агентства недвижимости Агентство
 	"citrus.core:include",
 	".default",
 	array(
+		"AREA_FILE_SHOW" => "component",
+		"_COMPONENT" => "citrus:template",
+		"_COMPONENT_TEMPLATE" => "ajaxcontent",
+		"PAGE_SECTION" => "Y",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+
+		'DATA' => [
+			'TAB' => $_REQUEST['tab'],
+		],
+		'AJAX_MODE' => 'Y',
+		'AJAX_OPTION_JUMP' => 'N',
+		//"AJAX_OPTION_HISTORY" => "N",
+        //"AJAX_OPTION_SHADOW" => "N",
+        //"AJAX_OPTION_STYLE" => "N",
+        //"AJAX_OPTION_ADDITIONAL" => "tovar-comment",
+	),
+	false
+);?>
+
+<?$APPLICATION->IncludeComponent(
+	"citrus.core:include",
+	".default",
+	array(
 		"AREA_FILE_SHOW" => "page",
 		"AREA_FILE_SUFFIX" => "quick-sale",
 		"PAGE_SECTION" => "Y",

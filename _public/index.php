@@ -181,4 +181,17 @@ $APPLICATION->SetPageProperty("keywords", "сайт агентства недвижимости Агентство
 	false
 );?>
 
+<script>
+	// пример кастомизации индикации - заменить реализацию bitrix js методов
+
+	BX.showWait = function (node, msg) {
+		console.log('Ajax loading...');
+	};
+
+	BX.closeWait = function (node, obMsg) {
+		console.log('Ajax loading finished.');
+	};
+
+</script>
+
 <?require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");?>

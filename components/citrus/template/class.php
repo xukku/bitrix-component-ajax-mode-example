@@ -22,6 +22,27 @@ class TemplateComponent extends CBitrixComponent implements Controllerable
 	 */
 	public function executeComponent()
 	{
+		$request = \Bitrix\Main\Context::getCurrent()->getRequest();
+		if ($request->isAjaxRequest())
+		{
+			$ajaxId = $request->get('bxajaxid'); // id компонента который обновляется через ajax
+			if ($ajaxId)
+			{
+				if ($ajaxId != $this->arParams['AJAX_ID'])
+				{
+					// пропустить обработку компонента
+					return;
+				}
+				/*
+				\Bitrix\Main\Diag\Debug::writeToFile([
+					'REQUEST_URI' => $_SERVER['REQUEST_URI'],
+					'AJAX_MODE' => $this->arParams['AJAX_MODE'],
+					'AJAX_ID' => $this->arParams['AJAX_ID'],
+				], __METHOD__);
+				*/
+			}
+		}
+
 		$this->includeComponentTemplate();
 	}
 

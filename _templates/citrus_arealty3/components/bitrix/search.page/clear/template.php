@@ -96,7 +96,8 @@
 							$component, array("HIDE_ICONS" => "Y")
 						);?>
 					<?else:?>
-						<input class="form-control" type="text" name="q" value="<?=$arResult["REQUEST"]["QUERY"]?>" />
+						<?php // FIX ?>
+						<input id="form-search-input" class="form-control" type="text" name="q" value="<?=$arResult["REQUEST"]["QUERY"]?>" />
 					<?endif;?>
 					</div>
 				</td>
@@ -104,7 +105,8 @@
 					&nbsp;
 				</td>
 				<td>
-					<input class="btn btn-primary" type="submit" value="<?echo GetMessage("CT_BSP_GO")?>" />
+					<?php // FIX ?>
+					<input id="btn-form-search" class="btn btn-primary" type="submit" value="<?echo GetMessage("CT_BSP_GO")?>" />
 				</td>
 			</tr>
 		</tbody></table>

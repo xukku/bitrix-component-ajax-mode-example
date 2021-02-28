@@ -21,7 +21,7 @@ $navigationUrl = $APPLICATION->GetCurPageParam('tab=' . $tabId, [
 <div align="center">
 	<a href="<?= $navigationUrl ?>">Обновить блок</a>
 
-	<h3>Блок: <?= $tabId? 'citrus.form' : 'main.feedback'; ?> [<?= date('Y-m-d H:i:s') ?>]</h3>
+	<h3>Блок: <?= $arParams['AJAX_OPTION_ADDITIONAL'] ?> / <?= $tabId? 'citrus.form' : 'main.feedback'; ?> [<?= date('Y-m-d H:i:s') ?>]</h3>
 </div>
 
 <?php if ($tabId == 0) { ?>
@@ -62,3 +62,8 @@ $navigationUrl = $APPLICATION->GetCurPageParam('tab=' . $tabId, [
 	);?>
 
 <?php } ?>
+
+<br>
+<pre>
+DATA: <?php print_r($arParams['~DATA']) ?>
+</pre>

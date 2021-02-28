@@ -31,13 +31,15 @@ $APPLICATION->SetPageProperty("keywords", "сайт агентства недвижимости Агентство
 
 		'DATA' => [
 			'TAB' => $_REQUEST['tab'],
+			'ID' => 111,
 		],
 		'AJAX_MODE' => 'Y',
 		'AJAX_OPTION_JUMP' => 'N',
 		//"AJAX_OPTION_HISTORY" => "N",
         //"AJAX_OPTION_SHADOW" => "N",
         //"AJAX_OPTION_STYLE" => "N",
-        //"AJAX_OPTION_ADDITIONAL" => "tovar-comment",
+
+        //"AJAX_OPTION_ADDITIONAL" => "top_ajaxblock1", // раньше нужно было указывать уникальный ID если несколько компонентов ajax на странице
 	),
 	false
 );?>
@@ -149,6 +151,32 @@ $APPLICATION->SetPageProperty("keywords", "сайт агентства недвижимости Агентство
 		"DESCRIPTION" => "Продуманное и качественное жилье для каждой семьи по ценам от застройщика!",
 		"PAGE_SECTION" => "Y",
 		"WIDGET_REL" => "new-offers",
+	),
+	false
+);?>
+
+<?$APPLICATION->IncludeComponent(
+	"citrus.core:include",
+	".default",
+	array(
+		"AREA_FILE_SHOW" => "component",
+		"_COMPONENT" => "citrus:template",
+		"_COMPONENT_TEMPLATE" => "ajaxcontent",
+		"PAGE_SECTION" => "Y",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+
+		'DATA' => [
+			'TAB' => $_REQUEST['tab'],
+			'ID' => 333,
+		],
+		'AJAX_MODE' => 'Y',
+		'AJAX_OPTION_JUMP' => 'N',
+		//"AJAX_OPTION_HISTORY" => "N",
+        //"AJAX_OPTION_SHADOW" => "N",
+        //"AJAX_OPTION_STYLE" => "N",
+
+        //"AJAX_OPTION_ADDITIONAL" => "bottom_ajaxblock2", // раньше нужно было указывать уникальный ID если несколько компонентов ajax на странице
 	),
 	false
 );?>

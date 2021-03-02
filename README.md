@@ -14,3 +14,7 @@ https://github.com/whateveruse/bitrix-component-ajax-mode-example/blob/master/co
 https://github.com/whateveruse/bitrix-component-ajax-mode-example/blob/master/_public/search/index.php
 
 https://github.com/whateveruse/bitrix-component-ajax-mode-example/blob/master/_templates/citrus_arealty3/components/bitrix/search.page/clear/script.js
+
+3) Кастомизация индикации ajax
+
+https://github.com/whateveruse/bitrix-component-ajax-mode-example/blob/master/assets/js/fix_ajax_progress.js

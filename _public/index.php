@@ -35,8 +35,8 @@ $APPLICATION->SetPageProperty("keywords", "сайт агентства недвижимости Агентство
 		],
 		'AJAX_MODE' => 'Y',
 		'AJAX_OPTION_JUMP' => 'N',
-		//"AJAX_OPTION_HISTORY" => "N",
-        //"AJAX_OPTION_SHADOW" => "N",
+		'AJAX_OPTION_HISTORY' => 'N',
+        'AJAX_OPTION_SHADOW' => 'N',
         //"AJAX_OPTION_STYLE" => "N",
 
         //"AJAX_OPTION_ADDITIONAL" => "top_ajaxblock1", // раньше нужно было указывать уникальный ID если несколько компонентов ajax на странице
@@ -172,26 +172,13 @@ $APPLICATION->SetPageProperty("keywords", "сайт агентства недвижимости Агентство
 		],
 		'AJAX_MODE' => 'Y',
 		'AJAX_OPTION_JUMP' => 'N',
-		//"AJAX_OPTION_HISTORY" => "N",
-        //"AJAX_OPTION_SHADOW" => "N",
+		'AJAX_OPTION_HISTORY' => 'N',
+        'AJAX_OPTION_SHADOW' => 'N',
         //"AJAX_OPTION_STYLE" => "N",
 
         //"AJAX_OPTION_ADDITIONAL" => "bottom_ajaxblock2", // раньше нужно было указывать уникальный ID если несколько компонентов ajax на странице
 	),
 	false
 );?>
-
-<script>
-	// пример кастомизации индикации - заменить реализацию bitrix js методов
-
-	BX.showWait = function (node, msg) {
-		console.log('Ajax loading...');
-	};
-
-	BX.closeWait = function (node, obMsg) {
-		console.log('Ajax loading finished.');
-	};
-
-</script>
 
 <?require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");?>
